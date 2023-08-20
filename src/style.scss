@@ -171,12 +171,19 @@
 
         .searchForm {
           padding: 10px;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            cursor: pointer;
+          }
 
           input {
             background-color: transparent;
             border: none;
             color: white;
             outline: none;
+            width: 100%;
 
             &::placeholder {
               color: lightgray;

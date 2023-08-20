@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Search = () => {
   const [username, setUsername] = useState("");
@@ -94,9 +95,14 @@ const Search = () => {
             setUsername(e.target.value);
           }}
         />
+        <AiOutlineSearch
+          onClick={handleSearch}
+          className="icon"
+          style={{ color: "white" }}
+        />
       </div>
       {err && (
-        <span style={{ color: "red", fontSize: 12 }}>User not found</span>
+        <span style={{ color: "red", fontSize: 12 }}>Something went wrong</span>
       )}
       {user && (
         <div className="userChat" onClick={handleSelect}>
